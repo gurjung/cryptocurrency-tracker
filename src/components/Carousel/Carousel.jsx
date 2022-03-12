@@ -1,10 +1,11 @@
 import React from "react";
 import AliceCarousel from "react-alice-carousel";
-import { TrendingCoins } from "../config/index";
-import { CryptoState } from "./../context/CryptoContext";
-import { useFetch } from "../hooks";
+import { TrendingCoins } from "../../config/index";
+import { CryptoState } from "../../context/CryptoContext";
+import { useFetch } from "../../hooks";
 import { Link } from "react-router-dom";
 import millify from "millify";
+import "./carousel.css";
 const Carousel = () => {
   const { currency, symbol } = CryptoState();
   const { data } = useFetch(TrendingCoins(currency));

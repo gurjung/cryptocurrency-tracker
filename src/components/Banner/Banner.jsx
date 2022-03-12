@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Typography } from "@material-ui/core";
-import Carousel from "./Carousel";
-import { TEXTS } from "../constants";
+import Carousel from "../Carousel/Carousel";
+import { TEXTS } from "../../constants";
+import "./banner.css";
 const Banner = () => {
   return (
     <section style={{ backgroundImage: "url(./banner.jpg)" }}>

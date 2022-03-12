@@ -4,12 +4,13 @@ import {
   CircularProgress,
   createTheme,
 } from "@material-ui/core";
-import { HistoricalChart } from "../config";
+import { HistoricalChart } from "../../config";
 import { Line } from "react-chartjs-2";
-import { useFetch } from "../hooks";
-import { CryptoState } from "../context/CryptoContext";
-import { chartDays } from "../config";
-import { SelectButton } from "../ui";
+import { useFetch } from "../../hooks";
+import { CryptoState } from "../../context/CryptoContext";
+import { chartDays } from "../../config";
+import { SelectButton } from "../../ui";
+import "./coinsInfo.css";
 const CoinsInfo = ({ coin }) => {
   const { currency } = CryptoState();
   const [days, setDays] = useState(1);

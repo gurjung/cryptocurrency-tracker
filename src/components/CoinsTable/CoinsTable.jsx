@@ -17,10 +17,11 @@ import {
 import Pagination from "@material-ui/lab/Pagination";
 import { useNavigate } from "react-router-dom";
 import millify from "millify";
-import { CryptoState } from "../context/CryptoContext";
-import { useFetch } from "../hooks";
-import { CoinList } from "../config";
-import { TEXTS } from "../constants";
+import { CryptoState } from "../../context/CryptoContext";
+import { useFetch } from "../../hooks";
+import { CoinList } from "../../config";
+import { TEXTS } from "../../constants";
+import "./coinsTable.css";
 const CoinsTable = () => {
   const { currency, symbol } = CryptoState();
   const [search, setSearch] = useState("");

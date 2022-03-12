@@ -1,0 +1,15 @@
+.Banner-content {
+  height: 400px;
+  display: flex !important;
+  flex-direction: column;
+  padding-top: 25px;
+  justify-content: space-around;
+}
+
+.Banner-title {
+  display: flex;
+  height: 40%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}

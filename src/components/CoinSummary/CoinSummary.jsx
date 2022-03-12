@@ -1,13 +1,14 @@
 import React from "react";
 import millify from "millify";
-import { useFetch } from "../hooks";
-import { SingleCoin } from "../config";
-import { Typography, LinearProgress} from "@material-ui/core";
+import { useFetch } from "../../hooks";
+import { SingleCoin } from "../../config";
+import { Typography, LinearProgress } from "@material-ui/core";
 import { useParams } from "react-router-dom";
-import { CryptoState } from "../context/CryptoContext";
+import { CryptoState } from "../../context/CryptoContext";
 import ReactHtmlParser from "react-html-parser";
-import CoinsInfo from "./CoinsInfo";
-import { TEXTS } from "../constants";
+import CoinsInfo from "../CoinsInfo/CoinsInfo";
+import { TEXTS } from "../../constants";
+import "./coinSummary.css";
 const CoinSummary = () => {
   const { id } = useParams();
   const { data } = useFetch(SingleCoin(id));

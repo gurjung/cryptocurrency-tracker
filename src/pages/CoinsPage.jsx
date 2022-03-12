@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from "react";
-const CoinSummary = lazy(() => import("../components/CoinSummary"));
+const CoinSummary = lazy(() => import("../components/CoinSummary/CoinSummary"));
 const CoinsPage = () => {
   return (
     <div>
