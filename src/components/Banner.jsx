@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Typography } from "@material-ui/core";
+import Carousel from "./Carousel";
 const Banner = () => {
   return (
     <div style={{ backgroundImage: "url(./banner.jpg)" }}>
@@ -26,6 +27,7 @@ const Banner = () => {
             Get all the Info regarding your favorite Crypto Currency
           </Typography>
         </div>
+        <Carousel />
       </Container>
     </div>
   );
