@@ -137,7 +137,7 @@ const CoinsTable = () => {
                         </TableCell>
                         <TableCell align="right">
                           {symbol}{" "}
-                          {millify(row.market_cap.toString().slice(0, -6))}M
+                          {millify(row.market_cap.toString().slice(0, -6))}
                         </TableCell>
                       </TableRow>
                     );
