@@ -20,6 +20,7 @@ import millify from "millify";
 import { CryptoState } from "../context/CryptoContext";
 import { useFetch } from "../hooks";
 import { CoinList } from "../config";
+import { TEXTS } from "../constants";
 const CoinsTable = () => {
   const { currency, symbol } = CryptoState();
   const [search, setSearch] = useState("");
@@ -48,7 +49,7 @@ const CoinsTable = () => {
           variant="h4"
           style={{ margin: 18, fontFamily: "Montserrat" }}
         >
-          Cryptocurrency Prices by Market Cap
+          {TEXTS.COINS_TABLE_TITLE}
         </Typography>
         <TextField
           label="Search For a Crypto Currency.."
