@@ -6,7 +6,8 @@ import { Typography, LinearProgress, makeStyles } from "@material-ui/core";
 import { useParams } from "react-router-dom";
 import { CryptoState } from "../context/CryptoContext";
 import ReactHtmlParser from "react-html-parser";
-import Coinsinfo from "./Coinsinfo";
+import CoinsInfo from "./CoinsInfo";
+import { TEXTS } from "../constants";
 const CoinSummary = () => {
   const { id } = useParams();
   const { data } = useFetch(SingleCoin(id));
@@ -83,7 +84,7 @@ const CoinSummary = () => {
         <div className={classes.marketData}>
           <span style={{ display: "flex" }}>
             <Typography variant="h5" className={classes.heading}>
-              Rank:
+              {TEXTS.RANK}
             </Typography>
             &nbsp; &nbsp;
             <Typography
@@ -98,7 +99,7 @@ const CoinSummary = () => {
 
           <span style={{ display: "flex" }}>
             <Typography variant="h5" className={classes.heading}>
-              Current Price:
+              {TEXTS.CURRENT_PRICE}
             </Typography>
             &nbsp; &nbsp;
             <Typography
@@ -113,7 +114,7 @@ const CoinSummary = () => {
           </span>
           <span style={{ display: "flex" }}>
             <Typography variant="h5" className={classes.heading}>
-              Market Cap:
+              {TEXTS.MARKET_CAP}
             </Typography>
             &nbsp; &nbsp;
             <Typography
@@ -133,7 +134,7 @@ const CoinSummary = () => {
           </span>
         </div>
       </div>
-      <Coinsinfo coin={data} />
+      <CoinsInfo coin={data} />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from "./layout";
+import { TEXTS } from "./constants";
 import "./App.css";
 const HomePage = lazy(() => import("./pages/HomePage"));
 const CoinsPage = lazy(() => import("./pages/CoinsPage"));
@@ -9,7 +10,7 @@ const App = () => {
     <BrowserRouter>
       <div className="App">
         <Navbar />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div>{TEXTS.LOADING}</div>}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/coins/:id" element={<CoinsPage />} />
