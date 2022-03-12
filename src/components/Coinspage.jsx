@@ -6,11 +6,10 @@ import { Typography, LinearProgress, makeStyles } from "@material-ui/core";
 import { useParams } from "react-router-dom";
 import { CryptoState } from "../context/CryptoContext";
 import ReactHtmlParser from "react-html-parser";
+import Coinsinfo from "./Coinsinfo";
 const Coinspage = () => {
   const { id } = useParams();
-  console.log(id,'id')
   const { data } = useFetch(SingleCoin(id));
-  console.log(data,"...")
   const { currency, symbol } = CryptoState();
   const useStyles = makeStyles((theme) => ({
     container: {
@@ -134,6 +133,7 @@ const Coinspage = () => {
           </span>
         </div>
       </div>
+      <Coinsinfo coin={data} />
     </div>
   );
 };
