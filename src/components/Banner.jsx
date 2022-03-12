@@ -4,7 +4,7 @@ import Carousel from "./Carousel";
 import { TEXTS } from "../constants";
 const Banner = () => {
   return (
-    <div style={{ backgroundImage: "url(./banner.jpg)" }}>
+    <section style={{ backgroundImage: "url(./banner.jpg)" }}>
       <Container className="Banner-content">
         <div className="Banner-title">
           <Typography
@@ -30,7 +30,7 @@ const Banner = () => {
         </div>
         <Carousel />
       </Container>
-    </div>
+    </section>
   );
 };
 

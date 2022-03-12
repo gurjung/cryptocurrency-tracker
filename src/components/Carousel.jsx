@@ -49,19 +49,17 @@ const Carousel = () => {
     },
   };
   return (
-    <div>
-      <AliceCarousel
-        mouseTracking
-        infinite
-        autoPlayInterval={1000}
-        animationDuration={1500}
-        disableDotsControls
-        disableButtonsControls
-        responsive={responsive}
-        items={items}
-        autoPlay
-      />
-    </div>
+    <AliceCarousel
+      mouseTracking
+      infinite
+      autoPlayInterval={1000}
+      animationDuration={1500}
+      disableDotsControls
+      disableButtonsControls
+      responsive={responsive}
+      items={items}
+      autoPlay
+    />
   );
 };
 

@@ -11,6 +11,7 @@ import {
 } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
 import { CryptoState } from "../context/CryptoContext";
+import { TEXTS } from "../constants";
 const Navbar = () => {
   const navigate = useNavigate();
   const { currency, setCurrency } = CryptoState();
@@ -33,7 +34,7 @@ const Navbar = () => {
               onClick={() => navigate("/")}
               className="Nav-title"
             >
-              CryptoTracker
+              {TEXTS.APP_TITLE}
             </Typography>
             <Select
               variant="outlined"
@@ -41,8 +42,8 @@ const Navbar = () => {
               value={currency}
               onChange={(e) => setCurrency(e.target.value)}
             >
-              <MenuItem value={"USD"}>USD</MenuItem>
-              <MenuItem value={"INR"}>INR</MenuItem>
+              <MenuItem value={"USD"}>{TEXTS.CURRENCY.USD}</MenuItem>
+              <MenuItem value={"INR"}>{TEXTS.CURRENCY.INR}</MenuItem>
             </Select>
           </Toolbar>
         </Container>
