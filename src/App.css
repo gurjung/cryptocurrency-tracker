@@ -52,3 +52,18 @@ a {
   text-transform: uppercase;
   color: white;
 }
+
+.Table-row {
+  background-color: #16171a;
+  cursor: pointer;
+}
+
+.Table-row:hover {
+  background-color: #131111;
+}
+
+.pagination,
+.MuiPagination-ul,
+.MuiPaginationItem-root {
+  color: gold !important;
+}
