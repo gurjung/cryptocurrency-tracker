@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import { CryptoState } from "../context/CryptoContext";
 import ReactHtmlParser from "react-html-parser";
 import Coinsinfo from "./Coinsinfo";
-const Coinspage = () => {
+const CoinSummary = () => {
   const { id } = useParams();
   const { data } = useFetch(SingleCoin(id));
   const { currency, symbol } = CryptoState();
@@ -138,4 +138,4 @@ const Coinspage = () => {
   );
 };
 
-export default Coinspage;
+export default CoinSummary;
