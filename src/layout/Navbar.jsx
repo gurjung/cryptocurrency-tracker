@@ -10,8 +10,11 @@ import {
   ThemeProvider,
 } from "@material-ui/core";
 import { useNavigate } from "react-router-dom";
+import { CryptoState } from "../context/CryptoContext";
 const Navbar = () => {
   const navigate = useNavigate();
+  const { currency, setCurrency } = CryptoState();
+
   const darkTheme = createTheme({
     palette: {
       primary: {
@@ -25,12 +28,18 @@ const Navbar = () => {
       <AppBar color="transparent" position="static">
         <Container>
           <Toolbar>
-            <Typography onClick={() => navigate("/")} className="Nav-title">
+            <Typography
+              variant="h6"
+              onClick={() => navigate("/")}
+              className="Nav-title"
+            >
               CryptoTracker
             </Typography>
             <Select
               variant="outlined"
               style={{ width: 100, height: 40, marginLeft: 15 }}
+              value={currency}
+              onChange={(e) => setCurrency(e.target.value)}
             >
               <MenuItem value={"USD"}>USD</MenuItem>
               <MenuItem value={"INR"}>INR</MenuItem>
