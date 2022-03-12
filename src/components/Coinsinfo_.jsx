@@ -11,7 +11,7 @@ import { useFetch } from "../hooks";
 import { CryptoState } from "../context/CryptoContext";
 import { chartDays } from "../config";
 import { SelectButton } from "../ui";
-const Coinsinfo = ({ coin }) => {
+const Coinsinfo_ = ({ coin }) => {
   const { currency } = CryptoState();
   const [days, setDays] = useState(1);
   const { data } = useFetch(HistoricalChart(coin?.id, days, currency));
