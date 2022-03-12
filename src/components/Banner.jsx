@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Typography } from "@material-ui/core";
 const Banner = () => {
   return (
-    <div style={{ backgroundImage: "url(./banner2.jpg)" }}>
+    <div style={{ backgroundImage: "url(./banner.jpg)" }}>
       <Container className="Banner-content">
         <div className="Banner-title">
           <Typography
