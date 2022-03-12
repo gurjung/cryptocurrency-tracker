@@ -1,9 +1,11 @@
 import React from "react";
 import { Container, Typography } from "@material-ui/core";
-import Carousel from "./Carousel";
+import Carousel from "../Carousel/Carousel";
+import { TEXTS } from "../../constants";
+import "./banner.css";
 const Banner = () => {
   return (
-    <div style={{ backgroundImage: "url(./banner.jpg)" }}>
+    <section style={{ backgroundImage: "url(./banner.jpg)" }}>
       <Container className="Banner-content">
         <div className="Banner-title">
           <Typography
@@ -14,7 +16,7 @@ const Banner = () => {
               fontFamily: "Montserrat",
             }}
           >
-            Crypto Tracker
+            {TEXTS.BANNER_TITLE}
           </Typography>
           <Typography
             variant="subtitle2"
@@ -24,12 +26,12 @@ const Banner = () => {
               fontFamily: "Montserrat",
             }}
           >
-            Get all the Info regarding your favorite Crypto Currency
+            {TEXTS.BANNER_SUBTITLE}
           </Typography>
         </div>
         <Carousel />
       </Container>
-    </div>
+    </section>
   );
 };
 

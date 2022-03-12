@@ -1,0 +1,67 @@
+.Coin-summaryContainer {
+  display: flex;
+}
+
+@media screen and (max-width: 960px) {
+  .Coin-summaryContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.Coin-summarySidebar {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  border-right: 2px solid grey;
+}
+
+@media screen and (max-width: 960px) {
+  .Coin-summarySidebar {
+    width: 100%;
+  }
+}
+
+.Coin-summaryHeading {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: Montserrat;
+}
+
+.Coin-summaryDescription {
+  width: 100%;
+  font-family: Montserrat;
+  padding: 25px;
+  padding-bottom: 15px;
+  padding-top: 0;
+  text-align: justify;
+}
+
+.Coin-summaryMarketData {
+  align-self: start;
+  padding: 25px;
+  padding-top: 10px;
+  width: 100%;
+}
+
+@media screen and (max-width: 960px) {
+  .Coin-summaryMarketData {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Coin-summaryMarketData {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 0px) {
+  .Coin-summaryMarketData {
+    align-items: start;
+  }
+}

@@ -17,9 +17,11 @@ import {
 import Pagination from "@material-ui/lab/Pagination";
 import { useNavigate } from "react-router-dom";
 import millify from "millify";
-import { CryptoState } from "../context/CryptoContext";
-import { useFetch } from "../hooks";
-import { CoinList } from "../config";
+import { CryptoState } from "../../context/CryptoContext";
+import { useFetch } from "../../hooks";
+import { CoinList } from "../../config";
+import { TEXTS } from "../../constants";
+import "./coinsTable.css";
 const CoinsTable = () => {
   const { currency, symbol } = CryptoState();
   const [search, setSearch] = useState("");
@@ -48,7 +50,7 @@ const CoinsTable = () => {
           variant="h4"
           style={{ margin: 18, fontFamily: "Montserrat" }}
         >
-          Cryptocurrency Prices by Market Cap
+          {TEXTS.COINS_TABLE_TITLE}
         </Typography>
         <TextField
           label="Search For a Crypto Currency.."
@@ -135,7 +137,7 @@ const CoinsTable = () => {
                         </TableCell>
                         <TableCell align="right">
                           {symbol}{" "}
-                          {millify(row.market_cap.toString().slice(0, -6))}M
+                          {millify(row.market_cap.toString().slice(0, -6))}
                         </TableCell>
                       </TableRow>
                     );
